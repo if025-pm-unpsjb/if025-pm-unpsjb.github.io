@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Trabajo Práctico 2 - Sistemas Embebidos y de Tiempo Real.</title>
+<meta name="description" content="Sitio de la cátedra SETR Puerto Madryn">
+<meta name="generator" content="Hugo 0.68.3" />
+<link href="if025-pm-unpsjb.github.io/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="if025-pm-unpsjb.github.io/practica/tp2/">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel="stylesheet" href="if025-pm-unpsjb.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="if025-pm-unpsjb.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="if025-pm-unpsjb.github.io/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Trabajo Práctico 2" />
+<meta property="og:description" content="Actividad: Dados los siguientes sistemas:
+ Tema 1 Tema 2 Tema 3 Tema 4    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (2,8,8), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    Calcular:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="if025-pm-unpsjb.github.io/practica/tp2/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Trabajo Práctico 2"/>
+<meta name="twitter:description" content="Actividad: Dados los siguientes sistemas:
+ Tema 1 Tema 2 Tema 3 Tema 4    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (2,8,8), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    Calcular:"/>
+<meta itemprop="name" content="Trabajo Práctico 2">
+<meta itemprop="description" content="Actividad: Dados los siguientes sistemas:
+ Tema 1 Tema 2 Tema 3 Tema 4    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (2,8,8), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    Calcular:">
+
+<meta itemprop="wordCount" content="433">
+
+
+
+<meta itemprop="keywords" content="" /><script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+<body><div class="container"><header>
+<h1>Sistemas Embebidos y de Tiempo Real.</h1>
+<p class="description">Sitio de la cátedra SETR Puerto Madryn</p>
+
+</header>
+
+<div class="content-container">
+<main><h1>Trabajo Práctico 2</h1>
+<h3 id="actividad">Actividad:</h3>
+<p>Dados los siguientes sistemas:</p>
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+		
+		
+
+		
+		
+		
+
+		
+
+		<a class="nav-item nav-link active" id="nav-1" data-toggle="tab" href="#tab11" role="tab"
+		   aria-controls="nav-home" aria-selected="true">Tema 1</a>
+
+		
+		
+
+		
+		
+		
+
+		
+
+		<a class="nav-item nav-link" id="nav-1" data-toggle="tab" href="#tab12" role="tab"
+		   aria-controls="nav-home" aria-selected="false">Tema 2</a>
+
+		
+		
+
+		
+		
+		
+
+		
+
+		<a class="nav-item nav-link" id="nav-1" data-toggle="tab" href="#tab13" role="tab"
+		   aria-controls="nav-home" aria-selected="false">Tema 3</a>
+
+		
+		
+
+		
+		
+		
+
+		
+
+		<a class="nav-item nav-link" id="nav-1" data-toggle="tab" href="#tab14" role="tab"
+		   aria-controls="nav-home" aria-selected="false">Tema 4</a>
+
+		
+		
+
+	</div>
+</nav>
+
+<div class="tab-content" id="1">
+
+ 
+
+
+
+
+
+
+<div class="tab-pane fade show active" id="tab11" role="tabpanel" aria-labelledby="nav-tabName1">
+
+	<ol>
+<li>\( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\)</li>
+<li>\( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\)</li>
+<li>\( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\)</li>
+<li>\( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)</li>
+</ol>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="tab-pane fade" id="tab12" role="tabpanel" aria-labelledby="nav-tabName2">
+
+	<ol>
+<li>\( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\)</li>
+<li>\( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\)</li>
+<li>\( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\)</li>
+<li>\( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)</li>
+</ol>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="tab-pane fade" id="tab13" role="tabpanel" aria-labelledby="nav-tabName3">
+
+	<ol>
+<li>\( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\)</li>
+<li>\( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\)</li>
+<li>\( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\)</li>
+<li>\( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)</li>
+</ol>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="tab-pane fade" id="tab14" role="tabpanel" aria-labelledby="nav-tabName4">
+
+	<ol>
+<li>\( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\)</li>
+<li>\( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\)</li>
+<li>\( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\)</li>
+<li>\( S(5) = \{(1,5,5), (1,6,6), (2,8,8), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)</li>
+</ol>
+
+</div>
+
+
+
+
+
+</div>
+<p>Calcular:</p>
+<ol>
+<li>
+<p>La capacidad de una tarea servidora <strong>Polling Server (PS)</strong>, cuyo periodo sea igual al de la tarea de mayor prioridad. Calcular la capacidad mediante el método de cotas.</p>
+</li>
+<li>
+<p>La capacidad de una tarea servidora <strong>Deferrable Server (DS)</strong>, cuyo periodo sea igual al de la tarea de mayor prioridad. Emplear los métodos de cotas y mediante K.</p>
+</li>
+<li>
+<p>Diagramar la planificación hasta atender todas las tareas aperiódicas, para cada uno de los siguientes métodos:</p>
+<ul>
+<li>Background Server (BS),</li>
+<li>DS,</li>
+<li>PS,</li>
+<li>Dual Priority,</li>
+<li>K-diagramabilidad</li>
+<li>Slack Stealing (SS).</li>
+</ul>
+<p>Emplear una heurística del tipo <em>greedy</em> con respecto al slack disponible, capacidad del servidor, etc., para la atención de las tareas aperiódicas. Esto implica que cuando se instancie una tarea aperiódica, se haga el máximo esfuerzo para su atención, sin especular con que puede existir mayor cantidad de slack, tiempo de servidor, etc., en un instante posterior.</p>
+</li>
+<li>
+<p>Calcular el tiempo de respuesta promedio de atención de las tareas aperiódicas para los distintos métodos.</p>
+</li>
+<li>
+<p>Realizar una comparativa de los tiempos promedios de atención de cada método, indicando cual presentó el mejor desempeño y una breve justificación del por qué.</p>
+</li>
+</ol>
+<h3 id="entrega">Entrega:</h3>
+<ul>
+<li>Formato: informe en formato PDF con los resultados (cálculos, planificación y comparativa). Se puede implementar los algoritmos en un programa (lenguaje a elección), como ayuda para realizar los ejercicios. En dicho caso, adjuntar también el código fuente del programa.</li>
+<li>Enviar por email.</li>
+<li>Fecha límite: <strong>16/9</strong>.</li>
+</ul>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="if025-pm-unpsjb.github.io/practica/" title="Trabajos Prácticos"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Trabajos Prácticos</a>
+<a class="nav nav-next" href="if025-pm-unpsjb.github.io/calendario/" title="Calendario">Next - Calendario <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="if025-pm-unpsjb.github.io">Home</a></li>
+
+<li class=""><a href="if025-pm-unpsjb.github.io/calendario/">Calendario</a>
+  
+</li>
+
+<li class="parent"><a href="if025-pm-unpsjb.github.io/practica/">Trabajos Prácticos</a>
+  
+<ul class="sub-menu">
+<li class="active"><a href="if025-pm-unpsjb.github.io/practica/tp2/">Trabajo Práctico 2</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</div>
+</body>
+</html>
