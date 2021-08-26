@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trabajos Prácticos on Sistemas Embebidos y de Tiempo Real.</title>
-    <link>if025-pm-unpsjb.github.io/practica/</link>
+    <link>https://if025-pm-unpsjb.github.io/practica/</link>
     <description>Recent content in Trabajos Prácticos on Sistemas Embebidos y de Tiempo Real.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="if025-pm-unpsjb.github.io/practica/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://if025-pm-unpsjb.github.io/practica/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Trabajo Práctico 2</title>
-      <link>if025-pm-unpsjb.github.io/practica/tp2/</link>
+      <link>https://if025-pm-unpsjb.github.io/practica/tp2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>if025-pm-unpsjb.github.io/practica/tp2/</guid>
+      <guid>https://if025-pm-unpsjb.github.io/practica/tp2/</guid>
       <description>Actividad: Dados los siguientes sistemas:
  Tema 1 Tema 2 Tema 3 Tema 4    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (1,7,7), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    \( S(3) = \{(1,3,3), (1,4,4), (1,6,6)\} \), \(J(2)=\{(3,1), (7,2)\}\) \( S(4) = \{(1,4,4), (1,5,5), (2,7,7), (1,12,12)\} \), \(J(4)=\{(3,2), (9,3), (12,2), (14,1)\}\) \( S(4) = \{(1,5,5), (1,7,7), (2,10,10), (1,20,20)\} \), \(J(5)=\{(0,2), (5,3), (11,2), (17,2), (21,4)\}\) \( S(5) = \{(1,5,5), (1,6,6), (2,8,8), (1,10,10), (1,18,18)\} \), \(J(5)=\{(3,2), (5,4), (9,2), (17,2), (20,3)\}\)    Calcular:</description>
     </item>

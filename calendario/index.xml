@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Calendario on Sistemas Embebidos y de Tiempo Real.</title>
-    <link>if025-pm-unpsjb.github.io/calendario/</link>
+    <link>https://if025-pm-unpsjb.github.io/calendario/</link>
     <description>Recent content in Calendario on Sistemas Embebidos y de Tiempo Real.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="if025-pm-unpsjb.github.io/calendario/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://if025-pm-unpsjb.github.io/calendario/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
